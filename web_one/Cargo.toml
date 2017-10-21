@@ -1,0 +1,9 @@
+[package]
+name = "web_one"
+version = "0.1.0"
+authors = ["Héctor Iván Patricio Moreno <hectorivanpatriciomoreno@gmail.com>"]
+
+[dependencies]
+iron = "0.5.*"
+rand = "*"
+rustc-serialize = "*"

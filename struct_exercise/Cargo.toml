@@ -1,0 +1,6 @@
+[package]
+name = "struct_exercise"
+version = "0.1.0"
+authors = ["Héctor Iván Patricio Moreno <hectorivanpatriciomoreno@gmail.com>"]
+
+[dependencies]
