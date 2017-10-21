@@ -1,0 +1,6 @@
+[package]
+name = "kraken_project"
+version = "0.1.0"
+authors = ["Héctor Iván Patricio Moreno <hectorivanpatriciomoreno@gmail.com>"]
+
+[dependencies]
