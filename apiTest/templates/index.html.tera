@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tera template testing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="six columns">
+                <h1> {{title}} </h1>
+                <h3>
+                    {% if name %} Page for {{name}} {% endif %}
+                </h3>
+            </div>
+            <div class="six columns">
+                <h5>{{body}}</h5>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class=" six columns">
+                <form action="/page" method="POST">
+                    <legend>¡Personlízalo!</legend>
+                    <label for="name">Nombre</label>
+                    <input class="u-full-width" type="text" placeholder="Un Nombre" name="name">
+                    <input type="submit" value="Launch!" class="button-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
