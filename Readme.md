@@ -1,11 +1,10 @@
 # Learning Rust
 
-Aprendiendo un poco acerca de Rust, empezando en el taller de Rust de Nearsoft OctoberTalks
+Aprendiendo Rust a través de ejercicios.
 
 ## ¿Por qué Rust?
 
 Pienso que puede ser el siguiente gran lenguaje para sistemas.
-
 
 ## Web
 
