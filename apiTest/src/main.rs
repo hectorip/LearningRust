@@ -1,7 +1,10 @@
-#![feature(plugin, custom_derive)]
-#![plugin(rocket_codegen)]
+#![feature(proc_macro_hygiene, decl_macro)]
+#![feature(plugin)]
+// #![feature(proc_macro_hygiene, decl_macro)]
+// #![plugin(rocket_codegen)]
+#[macro_use] extern crate rocket;
 
-extern crate rocket;
+
 extern crate rocket_contrib;
 extern crate rand;
 #[macro_use]
@@ -9,7 +12,9 @@ extern crate serde_derive;
 
 use rand::Rng;
 use rocket::request::Form;
-use rocket_contrib::{Template, Json};
+use rocket_contrib::templates::Template;
+use rocket_contrib::json::Json;
+// use rocket_contrib::Json;
 // use serde_derive::Serialize;
 
 #[derive(Serialize)]
@@ -20,7 +25,7 @@ struct PageContext {
 }
 
 #[derive(FromForm)]
-struct MyForm {
+struct NameForm {
     name: String,
 }
 
@@ -54,8 +59,8 @@ fn page() -> Template {
 }
 
 #[post("/page", data = "<data>")]
-fn page_post(data: Form<MyForm>) -> Template {
-    let form = data.get();
+fn page_post(data: Form<NameForm>) -> Template {
+    let form = data;
     let name = form.name.clone();
     let context = PageContext{
         title: "Random Quote".to_string(),
